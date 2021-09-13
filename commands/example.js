@@ -1,6 +1,6 @@
 const { Command } = require('gcommands')
 
-module.exports = class ball extends Command {
+module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             name: 'ping',

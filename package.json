@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "dis-easystart": "^1.0.2"
+    "dis-easystart": "^1.1.2",
+    "gcommands": "^7.0.2"
   }
 }
