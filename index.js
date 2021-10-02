@@ -1,6 +1,6 @@
-const { EasyStart } = require('dis-easystart')
+const { EasyClient } = require('dis-easystart')
 
-EasyStart({
+EasyClient({
     prefix_type: 'both', //true = slash only, false = only normal, both = slash and normal
     prefix: '!', // bot prefix
     database: '', //starts with mongodb://
