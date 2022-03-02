@@ -1,13 +1,13 @@
-const { Command } = require('gcommands')
+const { Command, CommandType } = require('gcommands');
 
-module.exports = class extends Command {
-    constructor(...args) {
-        super(...args, {
-            name: 'ping',
-            description: 'Says pong'
-        })
-    }
-
-    async run({client, respond, edit}, args) {
-		respond('Pong!')
-	}}
+// Create a new command with the name 'hello'
+new Command({
+	name: 'ping',
+	description: 'Ping Pong',
+	// GCommands Next offers different types of commands, we will only use slash and message commands here.
+	type: [CommandType.SLASH, CommandType.MESSAGE],
+	// The function thats executed when the user uses the command.
+	run: (ctx) => {
+		return ctx.reply(`Pong!`);
+	}
+});
